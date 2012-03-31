@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B8E18ED152738BD008F610F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E18EC152738BD008F610F /* UIKit.framework */; };
+		7B8E18EF152738BD008F610F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E18EE152738BD008F610F /* Foundation.framework */; };
+		7B8E18F1152738BD008F610F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E18F0152738BD008F610F /* CoreGraphics.framework */; };
+		7B8E18F7152738BD008F610F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E18F5152738BD008F610F /* InfoPlist.strings */; };
+		7B8E18F9152738BD008F610F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E18F8152738BD008F610F /* main.m */; };
+		7B8E18FD152738BD008F610F /* KTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E18FC152738BD008F610F /* KTAppDelegate.m */; };
+		7B8E1900152738BD008F610F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */; };
+		7B8E1903152738BD008F610F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */; };
+		7B8E1906152738BD008F610F /* KTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E1905152738BD008F610F /* KTMasterViewController.m */; };
+		7B8E1909152738BD008F610F /* KTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E1908152738BD008F610F /* KTDetailViewController.m */; };
+		7B8E1911152738BD008F610F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E1910152738BD008F610F /* SenTestingKit.framework */; };
+		7B8E1912152738BD008F610F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E18EC152738BD008F610F /* UIKit.framework */; };
+		7B8E1913152738BD008F610F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E18EE152738BD008F610F /* Foundation.framework */; };
+		7B8E191B152738BD008F610F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E1919152738BD008F610F /* InfoPlist.strings */; };
+		7B8E191E152738BD008F610F /* FeedReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E191D152738BD008F610F /* FeedReaderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B8E1914152738BD008F610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8E18DF152738BD008F610F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8E18E7152738BD008F610F;
+			remoteInfo = FeedReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B8E18E8152738BD008F610F /* FeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8E18EC152738BD008F610F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B8E18EE152738BD008F610F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B8E18F0152738BD008F610F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B8E18F4152738BD008F610F /* FeedReader-Info.plist */ = {isa = PBXFileReference; path = "FeedReader-Info.plist"; sourceTree = "<group>"; };
+		7B8E18F6152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B8E18F8152738BD008F610F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B8E18FA152738BD008F610F /* FeedReader-Prefix.pch */ = {isa = PBXFileReference; path = "FeedReader-Prefix.pch"; sourceTree = "<group>"; };
+		7B8E18FB152738BD008F610F /* KTAppDelegate.h */ = {isa = PBXFileReference; path = KTAppDelegate.h; sourceTree = "<group>"; };
+		7B8E18FC152738BD008F610F /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAppDelegate.m; sourceTree = "<group>"; };
+		7B8E18FF152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7B8E1902152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7B8E1904152738BD008F610F /* KTMasterViewController.h */ = {isa = PBXFileReference; path = KTMasterViewController.h; sourceTree = "<group>"; };
+		7B8E1905152738BD008F610F /* KTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMasterViewController.m; sourceTree = "<group>"; };
+		7B8E1907152738BD008F610F /* KTDetailViewController.h */ = {isa = PBXFileReference; path = KTDetailViewController.h; sourceTree = "<group>"; };
+		7B8E1908152738BD008F610F /* KTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTDetailViewController.m; sourceTree = "<group>"; };
+		7B8E190F152738BD008F610F /* FeedReaderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedReaderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8E1910152738BD008F610F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7B8E1918152738BD008F610F /* FeedReaderTests-Info.plist */ = {isa = PBXFileReference; path = "FeedReaderTests-Info.plist"; sourceTree = "<group>"; };
+		7B8E191A152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B8E191C152738BD008F610F /* FeedReaderTests.h */ = {isa = PBXFileReference; path = FeedReaderTests.h; sourceTree = "<group>"; };
+		7B8E191D152738BD008F610F /* FeedReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedReaderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B8E18E5152738BD008F610F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E18ED152738BD008F610F /* UIKit.framework in Frameworks */,
+				7B8E18EF152738BD008F610F /* Foundation.framework in Frameworks */,
+				7B8E18F1152738BD008F610F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8E190B152738BD008F610F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E1911152738BD008F610F /* SenTestingKit.framework in Frameworks */,
+				7B8E1912152738BD008F610F /* UIKit.framework in Frameworks */,
+				7B8E1913152738BD008F610F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B8E18DD152738BC008F610F = {
+			isa = PBXGroup;
+			children = (
+				7B8E18F2152738BD008F610F /* FeedReader */,
+				7B8E1916152738BD008F610F /* FeedReaderTests */,
+				7B8E18EB152738BD008F610F /* Frameworks */,
+				7B8E18E9152738BD008F610F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B8E18E9152738BD008F610F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E18E8152738BD008F610F /* FeedReader.app */,
+				7B8E190F152738BD008F610F /* FeedReaderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B8E18EB152738BD008F610F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E18EC152738BD008F610F /* UIKit.framework */,
+				7B8E18EE152738BD008F610F /* Foundation.framework */,
+				7B8E18F0152738BD008F610F /* CoreGraphics.framework */,
+				7B8E1910152738BD008F610F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B8E18F2152738BD008F610F /* FeedReader */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E18FB152738BD008F610F /* KTAppDelegate.h */,
+				7B8E18FC152738BD008F610F /* KTAppDelegate.m */,
+				7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */,
+				7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */,
+				7B8E1904152738BD008F610F /* KTMasterViewController.h */,
+				7B8E1905152738BD008F610F /* KTMasterViewController.m */,
+				7B8E1907152738BD008F610F /* KTDetailViewController.h */,
+				7B8E1908152738BD008F610F /* KTDetailViewController.m */,
+				7B8E18F3152738BD008F610F /* Supporting Files */,
+			);
+			path = FeedReader;
+			sourceTree = "<group>";
+		};
+		7B8E18F3152738BD008F610F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E18F4152738BD008F610F /* FeedReader-Info.plist */,
+				7B8E18F5152738BD008F610F /* InfoPlist.strings */,
+				7B8E18F8152738BD008F610F /* main.m */,
+				7B8E18FA152738BD008F610F /* FeedReader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B8E1916152738BD008F610F /* FeedReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E191C152738BD008F610F /* FeedReaderTests.h */,
+				7B8E191D152738BD008F610F /* FeedReaderTests.m */,
+				7B8E1917152738BD008F610F /* Supporting Files */,
+			);
+			path = FeedReaderTests;
+			sourceTree = "<group>";
+		};
+		7B8E1917152738BD008F610F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B8E1918152738BD008F610F /* FeedReaderTests-Info.plist */,
+				7B8E1919152738BD008F610F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B8E18E7152738BD008F610F /* FeedReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8E1921152738BD008F610F /* Build configuration list for PBXNativeTarget "FeedReader" */;
+			buildPhases = (
+				7B8E18E4152738BD008F610F /* Sources */,
+				7B8E18E5152738BD008F610F /* Frameworks */,
+				7B8E18E6152738BD008F610F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FeedReader;
+			productName = FeedReader;
+			productReference = 7B8E18E8152738BD008F610F /* FeedReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B8E190E152738BD008F610F /* FeedReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8E1924152738BD008F610F /* Build configuration list for PBXNativeTarget "FeedReaderTests" */;
+			buildPhases = (
+				7B8E190A152738BD008F610F /* Sources */,
+				7B8E190B152738BD008F610F /* Frameworks */,
+				7B8E190C152738BD008F610F /* Resources */,
+				7B8E190D152738BD008F610F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B8E1915152738BD008F610F /* PBXTargetDependency */,
+			);
+			name = FeedReaderTests;
+			productName = FeedReaderTests;
+			productReference = 7B8E190F152738BD008F610F /* FeedReaderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B8E18DF152738BD008F610F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7B8E18E2152738BD008F610F /* Build configuration list for PBXProject "FeedReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B8E18DD152738BC008F610F;
+			productRefGroup = 7B8E18E9152738BD008F610F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B8E18E7152738BD008F610F /* FeedReader */,
+				7B8E190E152738BD008F610F /* FeedReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B8E18E6152738BD008F610F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E18F7152738BD008F610F /* InfoPlist.strings in Resources */,
+				7B8E1900152738BD008F610F /* MainStoryboard_iPhone.storyboard in Resources */,
+				7B8E1903152738BD008F610F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8E190C152738BD008F610F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E191B152738BD008F610F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B8E190D152738BD008F610F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B8E18E4152738BD008F610F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E18F9152738BD008F610F /* main.m in Sources */,
+				7B8E18FD152738BD008F610F /* KTAppDelegate.m in Sources */,
+				7B8E1906152738BD008F610F /* KTMasterViewController.m in Sources */,
+				7B8E1909152738BD008F610F /* KTDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8E190A152738BD008F610F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8E191E152738BD008F610F /* FeedReaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B8E1915152738BD008F610F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8E18E7152738BD008F610F /* FeedReader */;
+			targetProxy = 7B8E1914152738BD008F610F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B8E18F5152738BD008F610F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B8E18F6152738BD008F610F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B8E18FF152738BD008F610F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B8E1902152738BD008F610F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7B8E1919152738BD008F610F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B8E191A152738BD008F610F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B8E191F152738BD008F610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B8E1920152738BD008F610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B8E1922152738BD008F610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FeedReader/FeedReader-Prefix.pch";
+				INFOPLIST_FILE = "FeedReader/FeedReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B8E1923152738BD008F610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FeedReader/FeedReader-Prefix.pch";
+				INFOPLIST_FILE = "FeedReader/FeedReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7B8E1925152738BD008F610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FeedReader.app/FeedReader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FeedReader/FeedReader-Prefix.pch";
+				INFOPLIST_FILE = "FeedReaderTests/FeedReaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7B8E1926152738BD008F610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FeedReader.app/FeedReader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FeedReader/FeedReader-Prefix.pch";
+				INFOPLIST_FILE = "FeedReaderTests/FeedReaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B8E18E2152738BD008F610F /* Build configuration list for PBXProject "FeedReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8E191F152738BD008F610F /* Debug */,
+				7B8E1920152738BD008F610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B8E1921152738BD008F610F /* Build configuration list for PBXNativeTarget "FeedReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8E1922152738BD008F610F /* Debug */,
+				7B8E1923152738BD008F610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B8E1924152738BD008F610F /* Build configuration list for PBXNativeTarget "FeedReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8E1925152738BD008F610F /* Debug */,
+				7B8E1926152738BD008F610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B8E18DF152738BD008F610F /* Project object */;
+}
