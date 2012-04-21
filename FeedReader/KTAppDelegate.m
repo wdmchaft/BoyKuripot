@@ -12,6 +12,7 @@
 
 @synthesize window = _window;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -20,6 +21,7 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    [self initDatabase];
     return YES;
 }
 							
@@ -61,5 +63,34 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+-(NSString *)dataFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:kFilename];
+}
+
+-(void)initDatabase{
+    if(sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK){
+        sqlite3_close(database);
+        NSAssert(0, @"Failed to open database.");
+    }
+    
+    char *errorMsg;
+    NSString *createFeedsSql = @"CREATE TABLE IF NOT EXISTS FEEDS(ID INTEGER PRIMARY KEY, BLOG_ENTRY_ID INTEGER, TITLE TEXT, CONTENT TEXT, URL TEXT, DATE_PUBLISHED DATETIME, DATE_UPDATED DATETIME);";
+    if(sqlite3_exec(database, [createFeedsSql UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
+        sqlite3_close(database);
+        NSAssert1(0, @"Error creating table: %s", errorMsg);
+    }
+    
+    NSString *createImagesSql = @"CREATE TABLE IF NOT EXISTS IMAGES(ID INTEGER PRIMARY KEY, ENTRY_ID INTEGER, IMAGE BLOB, MAIN INTEGER, URL TEXT);";
+    if(sqlite3_exec(database, [createImagesSql UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
+        sqlite3_close(database);
+        NSAssert1(0, @"Error creating table: %s", errorMsg);
+    }
+    sqlite3_close(database);
+    
+}
+
 
 @end

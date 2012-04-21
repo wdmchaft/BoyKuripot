@@ -16,7 +16,9 @@
 @implementation KTDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize label;
+@synthesize imageView;
+@synthesize contentView;
 @synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
@@ -40,7 +42,12 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        FeedEntry *entry = self.detailItem;
+        self.label.text = [self.detailItem title];
+        [contentView loadHTMLString:[WebContentService formatFeedEntryContent:entry.content] baseURL:nil];
+        //[contentView.layer setCornerRadius:10];
+        //[contentView.layer setMasksToBounds:YES];
+        [contentView setDelegate:self];
     }
 }
 
@@ -57,6 +64,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [ViewService getBackgroundGradientColors];
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)viewDidUnload

@@ -7,11 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedEntryLabel.h"
+#import "FeedEntry.h"
+#import "WebContentService.h"
+#import "ViewService.h"
+#import "QuartzCore/QuartzCore.h"
 
-@interface KTDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface KTDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>{
+    
+    FeedEntryLabel *label;
+    UIImageView *imageView;
+    UIWebView *contentView;
+    
+    
+}
 
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet FeedEntryLabel *label;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIWebView *contentView;
 
 @end

@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "/usr/include/sqlite3.h"
 
-@interface KTAppDelegate : UIResponder <UIApplicationDelegate>
+#define kFilename @"data.sqlite3"
+
+@interface KTAppDelegate : UIResponder <UIApplicationDelegate>{
+    sqlite3 *database;
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+-(NSString *)dataFilePath;
+-(void)initDatabase;
 
 @end
