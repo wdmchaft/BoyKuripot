@@ -17,7 +17,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="369"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="boykuripot-banner.jpg" id="fUK-sw-Bt6">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="boykuripot-banner.jpg" id="fUK-sw-Bt6">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -84,8 +84,8 @@
                                 <rect key="frame" x="142" y="260" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Loading data..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="7yo-C7-YCh">
-                                <rect key="frame" x="103" y="305" width="115" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Initializing, please wait..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="7yo-C7-YCh">
+                                <rect key="frame" x="85" y="305" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView clipsSubviews="YES" contentMode="scaleToFill" id="OoT-Ty-riY">
-                                <rect key="frame" x="0.0" y="39" width="320" height="325"/>
+                                <rect key="frame" x="0.0" y="39" width="320" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
@@ -165,7 +165,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KTDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="contentView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="FeedEntryLabel"/>
             </relationships>
         </class>
