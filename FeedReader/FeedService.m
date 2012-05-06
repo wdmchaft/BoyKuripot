@@ -11,6 +11,7 @@
 @implementation FeedService
 
 @synthesize parser;
+@synthesize delegate;
 
 -(id)init{
     id result = [super init];
@@ -23,17 +24,19 @@
     if(sqlite3_open([[DatabaseService dataFilePath] UTF8String], &database) != SQLITE_OK){
         // error handling
     }
-    FeedEntry *deleteEntries = [[FeedEntry alloc]init];
-    deleteEntries.database = database;
-    [deleteEntries deleteAll];
-    FeedEntryImage *deleteImages = [[FeedEntryImage alloc]init];
-    deleteImages.database = database;
-    [deleteImages deleteAll];
+    NSMutableArray *newEntries  = [[NSMutableArray alloc] init];
     for(FeedEntry *record in self.parser.entries){
         record.database = database;
         [record save];
+        if(record.isNew){
+            [delegate didStartDownloadingNewContent];
+            [record retrieveImagesFromServer];
+            [newEntries addObject:record];
+        }
     }
     sqlite3_close(database);
+    [delegate didFinishDownloading:newEntries];
 }
+
 
 @end

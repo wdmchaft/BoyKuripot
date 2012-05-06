@@ -1,4 +1,4 @@
-//
+    //
 //  FeedEntryXmlParser.m
 //  FeedReader
 //
@@ -17,6 +17,11 @@
     if([elementName isEqualToString:@"entry"]){
         currentEntry = [[FeedEntry alloc] init];
     }
+    if([currentElement isEqualToString:@"link"]){
+        if([[attributeDict objectForKey:@"rel"] isEqualToString:@"alternate"]){
+            currentEntry.url = [attributeDict objectForKey:@"href"];
+        }
+    }
 }
 
 -(void)parser: (NSXMLParser *) parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
@@ -26,6 +31,9 @@
 }
 
 -(void)parser: (NSXMLParser *) parser foundCharacters:(NSString *)string{
+    if([currentElement isEqualToString:@"id"]){
+        currentEntry.entryId = string;
+    }
     if([currentElement isEqualToString:@"title"]){
         currentEntry.title = string;
     }
@@ -35,6 +43,21 @@
         }else{
             currentEntry.content = [currentEntry.content stringByAppendingString:string];
         }
+    }
+    if([currentElement isEqualToString:@"published"]){
+        NSString *dateStr = [[string substringToIndex:19] stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate *date = [dateFormat dateFromString:dateStr];  
+        currentEntry.datePublished = date;
+    }
+
+    if([currentElement isEqualToString:@"updated"]){
+        NSString *dateStr = [[string substringToIndex:19] stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate *date = [dateFormat dateFromString:dateStr];  
+        currentEntry.dateUpdated = date;
     }
 }
 

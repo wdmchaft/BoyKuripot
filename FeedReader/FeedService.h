@@ -14,14 +14,22 @@
 #import "FeedEntry.h"
 #import "FeedEntryImage.h"
 
+@protocol FeedServiceDelegate
+- (void)didStartDownloadingNewContent;
+- (void)didFinishDownloading:newEntries;
+@end
+
 @interface FeedService : NSObject{
     
     FeedEntryXmlParser *parser;
     sqlite3 *database;
     
+    id <FeedServiceDelegate> delegate;
+    
 }
 
 @property (nonatomic, retain) FeedEntryXmlParser *parser;
+@property (nonatomic, retain) id<FeedServiceDelegate> delegate;
 
 -(void)retrieveFeeds:(NSString *) url;
 
