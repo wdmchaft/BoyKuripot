@@ -7,25 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyViewController.h"
 #import "FeedEntryLabel.h"
 #import "FeedEntry.h"
+#import "FeedEntryImage.h"
 #import "WebContentService.h"
 #import "ViewService.h"
 #import "QuartzCore/QuartzCore.h"
+#import "GADBannerView.h"
+#import <MessageUI/MessageUI.h>
+#import "AdsService.h"
 
-@interface KTDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>{
+@interface KTDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
     
     FeedEntryLabel *label;
-    UIImageView *imageView;
+    FeedEntryLabel *dateLabel;
     UIWebView *contentView;
-    
     
 }
 
 @property (strong, nonatomic) id detailItem;
-
 @property (strong, nonatomic) IBOutlet FeedEntryLabel *label;
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet FeedEntryLabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIWebView *contentView;
+
+-(void)share;
+-(void)shareEmail;
 
 @end

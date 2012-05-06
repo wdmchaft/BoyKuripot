@@ -8,6 +8,7 @@
 
 #import "KTDetailViewController.h"
 
+
 @interface KTDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -17,7 +18,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize label;
-@synthesize imageView;
+@synthesize dateLabel;
 @synthesize contentView;
 @synthesize masterPopoverController = _masterPopoverController;
 
@@ -27,34 +28,28 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
-        // Update the view.
         [self configureView];
     }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
     if (self.detailItem) {
         FeedEntry *entry = self.detailItem;
         self.label.text = [self.detailItem title];
-        [contentView loadHTMLString:[WebContentService formatFeedEntryContent:entry.content] baseURL:nil];
-        //[contentView.layer setCornerRadius:10];
-        //[contentView.layer setMasksToBounds:YES];
+        [contentView loadHTMLString:[WebContentService formatFeedEntryContent:entry] baseURL:nil];
         [contentView setDelegate:self];
+        
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+
+// disable links
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+	if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+		return NO;	
+	}
+	return YES;
 }
 
 #pragma mark - View lifecycle
@@ -62,30 +57,53 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
 
+    [self configureView];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.view.bounds;
     gradient.colors = [ViewService getBackgroundGradientColors];
     [self.view.layer insertSublayer:gradient atIndex:0];
-}
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+    // Initialize ads 
+    GADBannerView *bannerView = [AdsService getAdsBanner];
+    bannerView.rootViewController = self;
+    [self.view addSubview:bannerView];
+    [bannerView loadRequest:[GADRequest request]];
+    
+    dateLabel.text = [@"Posted on: " stringByAppendingString:[self.detailItem getDateUpdatedString]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    // initialize share button
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]
+                                    initWithImage: [UIImage imageNamed:@"share.png"]
+                                style:UIBarButtonItemStyleBordered
+                                target:self
+                                action:@selector(share)];
+    
+    self.navigationItem.rightBarButtonItem = shareButton;
+}
+
+-(void)share{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Options"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Open in Safari", @"Share via Email", nil];
+    [sheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0){ //open in Safari
+        FeedEntry *item = self.detailItem;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.url]];
+    }
+    if(buttonIndex == 1){ //share via email
+        [self shareEmail];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -98,30 +116,36 @@
 	[super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
+-(void)shareEmail{
+    if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+        
+        mailer.mailComposeDelegate = self;
+        
+        [mailer setSubject:NSLocalizedString(@"ShareEmailSubject", @"")];
+        
+        FeedEntry *item = self.detailItem;
+        
+        NSString *emailBody = [[(NSString *)NSLocalizedString(@"ShareEmailMessage",@"") stringByReplacingOccurrencesOfString:@"{LINK}" withString:item.url] stringByReplacingOccurrencesOfString:@"{TITLE}" withString:item.title];
+        [mailer setMessageBody:emailBody isHTML:YES];
+        
+        [self presentModalViewController:mailer animated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support the composer sheet"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
-#pragma mark - Split view
-
-- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
-}
 
 @end

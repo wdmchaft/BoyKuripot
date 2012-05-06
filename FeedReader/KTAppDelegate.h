@@ -7,18 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "/usr/include/sqlite3.h"
+#import "SplashViewController.h"
 
-#define kFilename @"data.sqlite3"
 
 @interface KTAppDelegate : UIResponder <UIApplicationDelegate>{
-    sqlite3 *database;
 
+    SplashViewController *splashViewController;
 }
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) IBOutlet UIWindow *window;
+@property (strong, nonatomic) IBOutlet SplashViewController *splashViewController;
 
--(NSString *)dataFilePath;
--(void)initDatabase;
 
 @end
