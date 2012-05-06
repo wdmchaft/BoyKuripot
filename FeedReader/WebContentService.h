@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class FeedEntry;
+
 @interface WebContentService : NSObject
 
 +(NSMutableArray *)getImages:(NSString *)content;
++(NSUInteger)findNextStringIndex:(NSString *)substring fromString:(NSString *)fromString;
 +(NSString *)findNextString:(NSString *)substring fromString:(NSString *)fromString;
 +(NSString *)findNextQuotedString:(NSString *)fromString;
-+(NSString *)formatFeedEntryContent:(NSString *)content;
++(NSString *)extractNextImageTag:(NSString *)fromString;
++(NSString *)setTagAttribute:(NSString *)tagString attributeName:(NSString *)attributeName value:(NSString *)value;
+
++(NSString *)formatFeedEntryContent:(FeedEntry *)content;
 
 @end
