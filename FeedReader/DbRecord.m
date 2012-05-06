@@ -13,7 +13,7 @@
 @synthesize database;
 @synthesize tableName;
 
-@synthesize id;
+@synthesize recordId;
 @synthesize fields;
 
 -(int)getInt:(sqlite3_stmt *) statement  column:(int) column{
@@ -29,11 +29,14 @@
     }
 }
 
--(NSDate *)getDate:(sqlite3_stmt *) statement  column:(int) column{
+-(NSDate *)getDate:(sqlite3_stmt *) statement  column:(int) column{ 
+    return [NSDate dateWithTimeIntervalSince1970:sqlite3_column_double(statement, column)];    
+}
+
+-(NSString *)getDateString:(NSDate *)date{
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *myDate =[dateFormat dateFromString:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, column)]];
-    return myDate;
+    [dateFormat setDateFormat:@"MMMM dd, yyyy hh:mm a"];
+    return [dateFormat stringFromDate:date];  
 }
 
 -(NSMutableArray *)retrieveAll{
@@ -55,13 +58,12 @@
     NSString *query = [[[[NSString alloc] initWithString:@"select * from TABLE_NAME where ID=?"] stringByReplacingOccurrencesOfString:@"TABLE_NAME" withString:tableName] stringByReplacingOccurrencesOfString:@"*" withString:fields];
     sqlite3_stmt *statement;
     if(sqlite3_prepare_v2(database, [query UTF8String], -1, &statement, nil) == SQLITE_OK){
-        sqlite3_bind_int(statement, 1, id);
+        sqlite3_bind_int(statement, 1, recordId);
     }
     while(sqlite3_step(statement) == SQLITE_ROW){
         [self build:statement];
     }
 }
-
 
 -(void)deleteAll{
     NSString *query = [[[NSString alloc] initWithString:@"delete from TABLE_NAME"] stringByReplacingOccurrencesOfString:@"TABLE_NAME" withString:tableName];
@@ -72,6 +74,11 @@
     if(sqlite3_step(statement) != SQLITE_DONE){
         NSAssert(0,@"Error on Insert.", sqlite3_errmsg(database));   
     }
+}
+
+-(BOOL)exists{
+    [self retrieve];
+    return (self.recordId != nil);
 }
 
 @end

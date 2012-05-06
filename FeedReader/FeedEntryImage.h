@@ -10,12 +10,12 @@
 #import "FeedEntry.h"
 
 #define kTableName @"IMAGES"
-#define kFields @"ENTRY_ID, IMAGE, MAIN, URL"
+#define kFields @"ENTRY_ID, FILENAME, MAIN, URL"
 
 @interface FeedEntryImage : DbRecord{
     
     FeedEntry *feedEntry;
-    UIImage *image;
+    NSString *filename;
     int main;
     NSString *url;
 
@@ -23,8 +23,10 @@
 
 
 @property (nonatomic, retain) FeedEntry *feedEntry;
-@property (nonatomic, retain) UIImage *image;
+@property (nonatomic, retain) NSString *filename;
 @property (nonatomic) int main;
 @property (nonatomic, retain) NSString *url;
+
+-(NSMutableArray *)retrieveAllByEntryId;
 
 @end
