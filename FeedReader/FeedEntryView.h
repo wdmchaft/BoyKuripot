@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FeedEntry.h"
+#import "FeedEntryImage.h"
 #import "WebContentService.h"
 #import "QuartzCore/QuartzCore.h"
 
@@ -15,7 +16,7 @@
 - (void)showDetail:(FeedEntry *)entry;
 @end
 
-@interface FeedEntryView : UIScrollView <UIWebViewDelegate>{
+@interface FeedEntryView : UIScrollView <UIWebViewDelegate, UIScrollViewDelegate>{
     
     UIImageView *image;
     
