@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3E615A15490E8000D603A5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E615915490E8000D603A5 /* MainWindow.xib */; };
+		7B3E615C15490EED00D603A5 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E615B15490EED00D603A5 /* SplashView.xib */; };
+		7B3E615E154915B400D603A5 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E615D154915B400D603A5 /* HomeView.xib */; };
+		7B3E61601549297A00D603A5 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E615F1549297A00D603A5 /* DetailView.xib */; };
+		7B3E61701549578000D603A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E616F1549578000D603A5 /* Localizable.strings */; };
+		7B3E6177155028A900D603A5 /* FeedEntryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E6176155028A400D603A5 /* FeedEntryButton.m */; };
+		7B3E617B15502F3700D603A5 /* reload.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E617A15502F3700D603A5 /* reload.gif */; };
+		7B3E617F1551725B00D603A5 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E617E1551725B00D603A5 /* AboutView.xib */; };
 		7B48F54615288D0600AF4235 /* DbRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B48F54515288D0600AF4235 /* DbRecord.m */; };
 		7B7C03161527D7080096D599 /* FeedEntryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C03151527D7080096D599 /* FeedEntryView.m */; };
 		7B7C031A1527D7430096D599 /* FeedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C03191527D7430096D599 /* FeedEntry.m */; };
@@ -16,8 +24,6 @@
 		7B8E18F7152738BD008F610F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E18F5152738BD008F610F /* InfoPlist.strings */; };
 		7B8E18F9152738BD008F610F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E18F8152738BD008F610F /* main.m */; };
 		7B8E18FD152738BD008F610F /* KTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E18FC152738BD008F610F /* KTAppDelegate.m */; };
-		7B8E1900152738BD008F610F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */; };
-		7B8E1903152738BD008F610F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */; };
 		7B8E1906152738BD008F610F /* KTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E1905152738BD008F610F /* KTMasterViewController.m */; };
 		7B8E1909152738BD008F610F /* KTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E1908152738BD008F610F /* KTDetailViewController.m */; };
 		7B8E1911152738BD008F610F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E1910152738BD008F610F /* SenTestingKit.framework */; };
@@ -30,6 +36,7 @@
 		7BAF107F15467B960029E4C2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAF107E15467B960029E4C2 /* AudioToolbox.framework */; };
 		7BAF108115467B9E0029E4C2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAF108015467B9E0029E4C2 /* MessageUI.framework */; };
 		7BAF108315467BA90029E4C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAF108215467BA90029E4C2 /* SystemConfiguration.framework */; };
+		7BB9E7501548F0310049BE0A /* boykuripot-app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9E74F1548F0310049BE0A /* boykuripot-app-icon-ipad.png */; };
 		7BCA1B6415484B4F00D080AE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA1B6315484B4F00D080AE /* Reachability.m */; };
 		7BD197C2152C860500C62FFE /* FeedEntryLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD197C1152C860400C62FFE /* FeedEntryLabel.m */; };
 		7BD19816152D4F5700C62FFE /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD19815152D4F5700C62FFE /* SplashViewController.m */; };
@@ -50,6 +57,9 @@
 		7BD198791540698D00C62FFE /* email.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD198761540698D00C62FFE /* email.jpg */; };
 		7BD1987A1540698D00C62FFE /* facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD198771540698D00C62FFE /* facebook.jpg */; };
 		7BD1987B1540698D00C62FFE /* twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD198781540698D00C62FFE /* twitter.jpg */; };
+		7BF2DCC015517CB900352952 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2DCBF15517CB900352952 /* AboutViewController.m */; };
+		7BF2DCC31554474600352952 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF2DCC21554474600352952 /* share.png */; };
+		7BF2DCC615561D5A00352952 /* AdsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2DCC515561D5A00352952 /* AdsService.m */; };
 		7BF553A71548392C00B133B1 /* boykuripot-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF553A61548392C00B133B1 /* boykuripot-app-icon.png */; };
 		7BF553AB15483AC500B133B1 /* boykuripot-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF553AA15483AC400B133B1 /* boykuripot-app-icon.png */; };
 		7BF553AD15483BA200B133B1 /* boykuripot-app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF553AC15483BA200B133B1 /* boykuripot-app-icon-retina.png */; };
@@ -68,6 +78,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B3E615915490E8000D603A5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		7B3E615B15490EED00D603A5 /* SplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		7B3E615D154915B400D603A5 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		7B3E615F1549297A00D603A5 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		7B3E616F1549578000D603A5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		7B3E61751550289700D603A5 /* FeedEntryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedEntryButton.h; sourceTree = "<group>"; };
+		7B3E6176155028A400D603A5 /* FeedEntryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedEntryButton.m; sourceTree = "<group>"; };
+		7B3E617A15502F3700D603A5 /* reload.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = reload.gif; path = images/reload.gif; sourceTree = "<group>"; };
+		7B3E617E1551725B00D603A5 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		7B48F54415288D0600AF4235 /* DbRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbRecord.h; sourceTree = "<group>"; };
 		7B48F54515288D0600AF4235 /* DbRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbRecord.m; sourceTree = "<group>"; };
 		7B7C03141527D7080096D599 /* FeedEntryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedEntryView.h; sourceTree = "<group>"; };
@@ -84,8 +103,6 @@
 		7B8E18FA152738BD008F610F /* Boy Kuripot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boy Kuripot-Prefix.pch"; sourceTree = "<group>"; };
 		7B8E18FB152738BD008F610F /* KTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTAppDelegate.h; sourceTree = "<group>"; };
 		7B8E18FC152738BD008F610F /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAppDelegate.m; sourceTree = "<group>"; };
-		7B8E18FF152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		7B8E1902152738BD008F610F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7B8E1904152738BD008F610F /* KTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMasterViewController.h; sourceTree = "<group>"; };
 		7B8E1905152738BD008F610F /* KTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMasterViewController.m; sourceTree = "<group>"; };
 		7B8E1907152738BD008F610F /* KTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTDetailViewController.h; sourceTree = "<group>"; };
@@ -110,6 +127,7 @@
 		7BAF107E15467B960029E4C2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7BAF108015467B9E0029E4C2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7BAF108215467BA90029E4C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7BB9E74F1548F0310049BE0A /* boykuripot-app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boykuripot-app-icon-ipad.png"; sourceTree = "<group>"; };
 		7BCA1B6215484B4F00D080AE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7BCA1B6315484B4F00D080AE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7BD197C0152C860400C62FFE /* FeedEntryLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedEntryLabel.h; sourceTree = "<group>"; };
@@ -141,6 +159,11 @@
 		7BD198761540698D00C62FFE /* email.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = email.jpg; path = images/email.jpg; sourceTree = "<group>"; };
 		7BD198771540698D00C62FFE /* facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = facebook.jpg; path = images/facebook.jpg; sourceTree = "<group>"; };
 		7BD198781540698D00C62FFE /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = twitter.jpg; path = images/twitter.jpg; sourceTree = "<group>"; };
+		7BF2DCBE15517CB900352952 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7BF2DCBF15517CB900352952 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		7BF2DCC21554474600352952 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = images/share.png; sourceTree = "<group>"; };
+		7BF2DCC415561D5A00352952 /* AdsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsService.h; sourceTree = "<group>"; };
+		7BF2DCC515561D5A00352952 /* AdsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsService.m; sourceTree = "<group>"; };
 		7BF553A61548392C00B133B1 /* boykuripot-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boykuripot-app-icon.png"; path = "images/boykuripot-app-icon.png"; sourceTree = "<group>"; };
 		7BF553A815483A4F00B133B1 /* boykuripot-app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boykuripot-app-icon-retina.png"; path = "images/boykuripot-app-icon-retina.png"; sourceTree = "<group>"; };
 		7BF553AA15483AC400B133B1 /* boykuripot-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boykuripot-app-icon.png"; sourceTree = "<group>"; };
@@ -179,9 +202,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B3E615815490E4300D603A5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7B3E615915490E8000D603A5 /* MainWindow.xib */,
+				7B3E615B15490EED00D603A5 /* SplashView.xib */,
+				7B3E617E1551725B00D603A5 /* AboutView.xib */,
+				7B3E615D154915B400D603A5 /* HomeView.xib */,
+				7B3E615F1549297A00D603A5 /* DetailView.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		7B8E18DD152738BC008F610F = {
 			isa = PBXGroup;
 			children = (
+				7BB9E74F1548F0310049BE0A /* boykuripot-app-icon-ipad.png */,
 				7BF553AC15483BA200B133B1 /* boykuripot-app-icon-retina.png */,
 				7BF553AA15483AC400B133B1 /* boykuripot-app-icon.png */,
 				7BAF108215467BA90029E4C2 /* SystemConfiguration.framework */,
@@ -230,6 +266,7 @@
 		7B8E18F2152738BD008F610F /* FeedReader */ = {
 			isa = PBXGroup;
 			children = (
+				7B3E615815490E4300D603A5 /* views */,
 				7BCA1B6215484B4F00D080AE /* Reachability.h */,
 				7BCA1B6315484B4F00D080AE /* Reachability.m */,
 				7BD198621540466600C62FFE /* css */,
@@ -238,14 +275,14 @@
 				7BD1984715307B9900C62FFE /* images */,
 				7B8E18FB152738BD008F610F /* KTAppDelegate.h */,
 				7B8E18FC152738BD008F610F /* KTAppDelegate.m */,
-				7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */,
-				7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */,
 				7BD19814152D4F5600C62FFE /* SplashViewController.h */,
 				7BD19815152D4F5700C62FFE /* SplashViewController.m */,
 				7B8E1904152738BD008F610F /* KTMasterViewController.h */,
 				7B8E1905152738BD008F610F /* KTMasterViewController.m */,
 				7B8E1907152738BD008F610F /* KTDetailViewController.h */,
 				7B8E1908152738BD008F610F /* KTDetailViewController.m */,
+				7BF2DCBE15517CB900352952 /* AboutViewController.h */,
+				7BF2DCBF15517CB900352952 /* AboutViewController.m */,
 				7B8E18F3152738BD008F610F /* Supporting Files */,
 				7B7C03141527D7080096D599 /* FeedEntryView.h */,
 				7B7C03151527D7080096D599 /* FeedEntryView.m */,
@@ -254,6 +291,8 @@
 				7BD1985415391DE600C62FFE /* Constants.h */,
 				7BF553B215483D5800B133B1 /* MyViewController.h */,
 				7BF553B315483D5800B133B1 /* MyViewController.m */,
+				7B3E61751550289700D603A5 /* FeedEntryButton.h */,
+				7B3E6176155028A400D603A5 /* FeedEntryButton.m */,
 			);
 			path = FeedReader;
 			sourceTree = "<group>";
@@ -265,6 +304,7 @@
 				7B8E18F5152738BD008F610F /* InfoPlist.strings */,
 				7B8E18F8152738BD008F610F /* main.m */,
 				7B8E18FA152738BD008F610F /* Boy Kuripot-Prefix.pch */,
+				7B3E616F1549578000D603A5 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -298,6 +338,8 @@
 		7BD1984715307B9900C62FFE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7BF2DCC21554474600352952 /* share.png */,
+				7B3E617A15502F3700D603A5 /* reload.gif */,
 				7BF553A815483A4F00B133B1 /* boykuripot-app-icon-retina.png */,
 				7BF553A61548392C00B133B1 /* boykuripot-app-icon.png */,
 				7BD198761540698D00C62FFE /* email.jpg */,
@@ -327,6 +369,8 @@
 				7BD1985C153EF96C00C62FFE /* WebContentService.m */,
 				7BD1986515404E0700C62FFE /* ViewService.h */,
 				7BD1986615404E0800C62FFE /* ViewService.m */,
+				7BF2DCC415561D5A00352952 /* AdsService.h */,
+				7BF2DCC515561D5A00352952 /* AdsService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -423,8 +467,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8E18F7152738BD008F610F /* InfoPlist.strings in Resources */,
-				7B8E1900152738BD008F610F /* MainStoryboard_iPhone.storyboard in Resources */,
-				7B8E1903152738BD008F610F /* MainStoryboard_iPad.storyboard in Resources */,
 				7BD1984615307B9100C62FFE /* BoyKuripot.jpg in Resources */,
 				7BD19850153906CB00C62FFE /* boykuripot-banner.jpg in Resources */,
 				7BD198711540531000C62FFE /* 300x100.jpg in Resources */,
@@ -438,6 +480,15 @@
 				7BF553AB15483AC500B133B1 /* boykuripot-app-icon.png in Resources */,
 				7BF553AD15483BA200B133B1 /* boykuripot-app-icon-retina.png in Resources */,
 				7BF553AE15483C2A00B133B1 /* boykuripot-app-icon-retina.png in Resources */,
+				7BB9E7501548F0310049BE0A /* boykuripot-app-icon-ipad.png in Resources */,
+				7B3E615A15490E8000D603A5 /* MainWindow.xib in Resources */,
+				7B3E615C15490EED00D603A5 /* SplashView.xib in Resources */,
+				7B3E615E154915B400D603A5 /* HomeView.xib in Resources */,
+				7B3E61601549297A00D603A5 /* DetailView.xib in Resources */,
+				7B3E61701549578000D603A5 /* Localizable.strings in Resources */,
+				7B3E617B15502F3700D603A5 /* reload.gif in Resources */,
+				7B3E617F1551725B00D603A5 /* AboutView.xib in Resources */,
+				7BF2DCC31554474600352952 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +541,9 @@
 				7BD1986715404E0800C62FFE /* ViewService.m in Sources */,
 				7BF553B415483D5800B133B1 /* MyViewController.m in Sources */,
 				7BCA1B6415484B4F00D080AE /* Reachability.m in Sources */,
+				7B3E6177155028A900D603A5 /* FeedEntryButton.m in Sources */,
+				7BF2DCC015517CB900352952 /* AboutViewController.m in Sources */,
+				7BF2DCC615561D5A00352952 /* AdsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,22 +572,6 @@
 				7B8E18F6152738BD008F610F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7B8E18FE152738BD008F610F /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B8E18FF152738BD008F610F /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		7B8E1901152738BD008F610F /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B8E1902152738BD008F610F /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		7B8E1919152738BD008F610F /* InfoPlist.strings */ = {
@@ -600,15 +638,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALTERNATE_OWNER = kerwintang;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kerwin Anthony Tang (72MS5XT7ER)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedReader/Boy Kuripot-Prefix.pch";
 				INFOPLIST_FILE = "FeedReader/Boy Kuripot-Info.plist";
 				INSTALL_OWNER = "$(USER)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "Boy Kuripot";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25E5CE41-D01B-45AA-92A7-7A99984FCB75";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -617,15 +659,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALTERNATE_OWNER = kerwintang;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kerwin Anthony Tang (72MS5XT7ER)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedReader/Boy Kuripot-Prefix.pch";
 				INFOPLIST_FILE = "FeedReader/Boy Kuripot-Info.plist";
 				INSTALL_OWNER = "$(USER)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "Boy Kuripot";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25E5CE41-D01B-45AA-92A7-7A99984FCB75";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
